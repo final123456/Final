@@ -1,4 +1,3 @@
-import javax.swing.plaf.synth.SynthLookAndFeel;
 import java.util.Scanner;
 
 public class thirdfloor {
@@ -11,7 +10,7 @@ public class thirdfloor {
             ThirdfloorM.displayM();
 
         else if(room3 == 2)
-            TirdfloorN.displayN();
+            ThirdfloorN.displayN();
 
 
     }
