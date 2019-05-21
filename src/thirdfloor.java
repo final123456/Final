@@ -7,11 +7,12 @@ public class thirdfloor {
         System.out.println("1) go to a room. 2) go to a closet. ");
         room3=k.nextInt();
         if (room3 == 1)
-            ThirdfloorM.displayM();
+           ThirdfloorM.displayM();
 
         else if(room3 == 2)
             ThirdfloorN.displayN();
-
+        else
+            System.out.println();
 
     }
 

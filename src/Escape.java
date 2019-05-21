@@ -6,7 +6,9 @@ public class Escape {
     public static void displayEscape(){
     int A1;
     int bat=0;
-//    boolean Count = true;
+
+
+
     Scanner k= new Scanner(System.in);
     System.out.println("You are kidnapped. you are looked in a room that is 4 s2tories high.\n" +
             "The Guy that kidnapped you is in the house. 1) jump of the window. 2) go out the door");
@@ -34,6 +36,7 @@ public class Escape {
 //                while(Count)
                 if (a3 == 1){
                     System.out.println("He Saw you getting out the bathroom. Try again");
+
                 }
                     if (a3 == 2)
                         stay(a3, bat);
@@ -48,8 +51,9 @@ public class Escape {
     userguess = k.nextInt();
     if (userguess == random) {
         System.out.println("You Escaped");}
-        else
+        else{
             System.out.println("You died, try again");
+    }
     }
     public static void stay(int a3, int bat){
     int a1;
@@ -72,7 +76,6 @@ public class Escape {
         }
         else
             DawnAFloor();
-
     }
     }
     public static void DawnAFloor() {
