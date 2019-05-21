@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class thirdfloor {
+
     public static void thirdfloor(){
         Scanner k = new Scanner(System.in);
         int room3;

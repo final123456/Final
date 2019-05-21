@@ -28,9 +28,24 @@ public class ThirdfloorM {
 
     }
     public static void displaychoise2(int coise){
+        Scanner k = new Scanner(System.in);
+        int choise3;
         if (coise==1){
-           System.out.println("The window is locked. HE COMES OUT THE ROOM HE WAS ON. There is a camera, he watch you the hole time  ");
+           System.out.println("The window is locked. HE COMES OUT THE ROOM HE WAS ON. There is a camera, he watch you the hole time Try again");
         }
+        else if(coise==2){
+            System.out.println("you looked up and there are cameras watching you. He comes out of his room. 1) Hide \n" +
+                    " behind the couch. 2) hide int the living room closet.");
+            choise3=k.nextInt();
+            choise3(choise3);
+        }
+    }
+    public static void choise3(int choise3){
+        if (choise3 == 1){
 
+        }
+        else if(choise3 == 2){
+
+        }
     }
 }
