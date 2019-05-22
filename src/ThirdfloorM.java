@@ -53,9 +53,14 @@ public class ThirdfloorM {
             System.out.println("1) Run for the stairs. 2) Stay ");
             s=k.nextInt();
             if(s==1){
-                System.out.println("You made it past the door and manage to lock the kidnapper in the room. you are know in floor 2");
+                System.out.println("You made it past the door and manage to lock the kidnapper in the room.");
+                System.out.println("As you go for the Stair a second person comes from the stairs and he capture's you.");
+                System.out.print("try again");
 
             }
+            else
+                System.out.println("He comes out of his room and heads to the living room closet. he has a shotgun. and\n" +
+                        "fires it at the living room closet.Try again");
         }
 
     }
