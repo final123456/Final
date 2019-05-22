@@ -5,10 +5,10 @@ public class Escape {
 
     public static void displayEscape(){
     int A1;
-
+    int bat=0;
 //    boolean Count = true;
     Scanner k= new Scanner(System.in);
-    System.out.println("You are kidnapped. you are looked in a room that is 4 s2tories high.\n" +
+    System.out.println("You are kidnapped. you are looked in a room that is 4 2tories high.\n" +
             "The Guy that kidnapped you is in the house. 1) jump of the window. 2) go out the door");
     A1=k.nextInt();
     if (A1 == 1)
@@ -72,12 +72,22 @@ public class Escape {
         }
         else
             DawnAFloor();
-
     }
     }
     public static void DawnAFloor() {
         System.out.println("You are now in floor 3. You see the kidnapper go into a room \n" +
                 " at the end of the hall. The stair are next to him.");
+            Scanner k = new Scanner(System.in);
+            int room3;
+            System.out.println("1) go to a room. 2) go to a closet. ");
+            room3=k.nextInt();
+            if (room3 == 1)
+                ThirdfloorM.displayM();
+
+            else if(room3 == 2)
+                ThirdfloorN.displayN();
+            else
+                System.out.println();
     }
     public static void chosebat(int bat){
     int count = 0;
