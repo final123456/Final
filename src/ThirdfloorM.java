@@ -40,12 +40,23 @@ public class ThirdfloorM {
             choise3(choise3);
         }
     }
-    public static void choise3(int choise3){
-        if (choise3 == 1){
-
-        }
-        else if(choise3 == 2){
-
+    public static void choise3(int choise3) {
+        if (choise3 == 1) {
+            System.out.println("Did you really that would work. try again ");
+        } else if (choise3 == 2) {
+            System.out.println(" He could find you and goes back to the room next to the stairs.");
         }
     }
-}
+        public static void backtoroom(){
+        Scanner k = new Scanner(System.in);
+        int s;
+            System.out.println("1) Run for the stairs. 2) Stay ");
+            s=k.nextInt();
+            if(s==1){
+                System.out.println("You made it past the door and manage to lock the kidnapper in the room. you are know in floor 2");
+
+            }
+        }
+
+    }
+

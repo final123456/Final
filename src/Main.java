@@ -4,7 +4,7 @@ public class Main {
 
 
         Escape.displayEscape();
-        thirdfloor.thirdfloor();
+
 
 
 
