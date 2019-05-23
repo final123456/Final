@@ -6,11 +6,17 @@ public class Escape {
     public static void displayEscape(){
     int A1;
     int exit = 0;
-    int bat=0;
-//    boolean Count = true;
+    int bat=0;//    boolean Count = true;
     Scanner k= new Scanner(System.in);
-    System.out.println("You are kidnapped. you are looked in a room that is 4 2tories high.\n" +
-            "The Guy that kidnapped you is in the house. 1) jump of the window. 2) go out the door");
+        System.out.println("You are kidnapped. you are looked in a room that is 4 tories high. The Guy that kidnapped you is in the house.");
+        System.out.println("  ____________           _______      ");
+        System.out.println("  |    |     |          (       )     ");
+        System.out.println("  |____|_____|         (         )    ");
+        System.out.println("  |    |     |         |         |    ");
+        System.out.println("  |____|_____|         |     []  |    ");
+        System.out.println("                       |         |    ");
+        System.out.println("                       |_________|    ");
+        System.out.println(" 1) jump of the window. 2) go out the door");
     A1=k.nextInt();
     if (A1 == 1)
         Jump(A1);
@@ -20,12 +26,30 @@ public class Escape {
         a2=k.nextInt();
             if(a2 == 1) {
                 int chose;
-                String bed;
-                String closet;
+                System.out.println("                               2) closet              ");
+                System.out.println("                               _____________          ");
+                System.out.println("  _      1)bed                |      |      |         ");
+                System.out.println(" ( )                   _      |      |      |         ");
+                System.out.println(" | |                  ( )     |      |      |         ");
+                System.out.println(" | |----|_|___________| |     |   [] | []   |         ");
+                System.out.println(" | |----| |           | |     |      |      |         ");
+                System.out.println(" | |____|_|___________| |     |      |      |         ");
+                System.out.println(" |_|                  |_|     |______|______|         ");
+
                 System.out.println("Hide 1)bed  2)closet ");
                 chose=k.nextInt();
                 System.out.println("The kidnapper goes into the room. He is mad and walks away.");
                 System.out.println("You come out of hiding. He Never left. TRY again");
+                System.out.println("                                                ");
+                System.out.println("                (-----------)                               ");
+                System.out.println("               (     __       )                              ");
+                System.out.println("              (     |''|       )                             ");
+                System.out.println("              |   |-[__]-|     |                             ");
+                System.out.println("              |   * (__)*      |                             ");
+                System.out.println("              |      : :       |                             ");
+                System.out.println("              |________________|                             ");
+
+
             }
             else if(a2 == 2){
                 int a3;
@@ -42,15 +66,25 @@ public class Escape {
     }
 }
     public static void Jump(int A1) {
-    int random = (int) (Math.random()) * 100 + 12;
+    int random = (int) (Math.random() * 100);
     int userguess;
     Scanner k = new Scanner(System.in);
     System.out.println("Chose a number from 1 to 100. If you guess it you escape");
     userguess = k.nextInt();
     if (userguess == random) {
         System.out.println("You Escaped");}
-        else
-            System.out.println("You died, try again");
+        else{
+        System.out.println("          ____                   ");
+        System.out.println("         |- - |     __           ");
+        System.out.println("         |____|    / /           ");
+        System.out.println("      ___/    |___/ /            ");
+        System.out.println("     / ___      ____/            ");
+        System.out.println("    / /  |     |                 ");
+        System.out.println("   /_/   |_____|                 ");
+        System.out.println("        / /  / /                 ");
+        System.out.println("       /_/  /_/                  ");
+
+        System.out.println("You died, try again");}
     }
     public static void stay(int a3, int bat, int exit){
     int a1;
@@ -60,7 +94,7 @@ public class Escape {
     System.out.println("1) Go DAWN a flor. 2) Look around ");
     a1=k.nextInt();
     if (a1 == 1) {
-       DawnAFloor(exit);
+       DawnAFloor();
         }
         else if (a1 == 2) {
         int getfirst;
@@ -69,14 +103,13 @@ public class Escape {
         getfirst=k.nextInt();
         if( getfirst == 1) {
             chosebat(bat);
-            DawnAFloor(exit);
+            DawnAFloor();
         }
         else
-            DawnAFloor(exit);
+            DawnAFloor();
     }
     }
-    public static void DawnAFloor(int exit) {
-        While(exit != 3);
+    public static void DawnAFloor() {
         {
         System.out.println("You are now in floor 3. You see the kidnapper go into a room \n" +
                 " at the end of the hall. The stair are next to him.");
@@ -91,7 +124,6 @@ public class Escape {
             ThirdfloorN.displayN();
         else
             System.out.println();
-        exit++;
     }
     }
 

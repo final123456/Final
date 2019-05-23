@@ -45,6 +45,7 @@ public class ThirdfloorM {
             System.out.println("Did you really that would work. try again ");
         } else if (choise3 == 2) {
             System.out.println(" He could find you and goes back to the room next to the stairs.");
+            backtoroom();
         }
     }
         public static void backtoroom(){
