@@ -5,6 +5,7 @@ public class Escape {
 
     public static void displayEscape(){
     int A1;
+    int exit = 0;
     int bat=0;
 //    boolean Count = true;
     Scanner k= new Scanner(System.in);
@@ -36,7 +37,7 @@ public class Escape {
                     System.out.println("He Saw you getting out the bathroom. Try again");
                 }
                     if (a3 == 2)
-                        stay(a3, bat);
+                        stay(a3,bat,exit);
             }
     }
 }
@@ -51,7 +52,7 @@ public class Escape {
         else
             System.out.println("You died, try again");
     }
-    public static void stay(int a3, int bat){
+    public static void stay(int a3, int bat, int exit){
     int a1;
     Scanner k = new Scanner(System.in);
     System.out.println("You Chose to stay. The Kidnapper notice you left. \n" +
@@ -59,7 +60,7 @@ public class Escape {
     System.out.println("1) Go DAWN a flor. 2) Look around ");
     a1=k.nextInt();
     if (a1 == 1) {
-       DawnAFloor();
+       DawnAFloor(exit);
         }
         else if (a1 == 2) {
         int getfirst;
@@ -68,27 +69,35 @@ public class Escape {
         getfirst=k.nextInt();
         if( getfirst == 1) {
             chosebat(bat);
-            DawnAFloor();
+            DawnAFloor(exit);
         }
         else
-            DawnAFloor();
+            DawnAFloor(exit);
     }
     }
-    public static void DawnAFloor() {
+    public static void DawnAFloor(int exit) {
+        While(exit != 3);
+        {
         System.out.println("You are now in floor 3. You see the kidnapper go into a room \n" +
                 " at the end of the hall. The stair are next to him.");
-            Scanner k = new Scanner(System.in);
-            int room3;
-            System.out.println("1) go to a room. 2) go to a closet. ");
-            room3=k.nextInt();
-            if (room3 == 1)
-                ThirdfloorM.displayM();
+        Scanner k = new Scanner(System.in);
+        int room3;
+        System.out.println("1) go to a room. 2) go to a closet. ");
+        room3 = k.nextInt();
+        if (room3 == 1)
+            ThirdfloorM.displayM();
 
-            else if(room3 == 2)
-                ThirdfloorN.displayN();
-            else
-                System.out.println();
+        else if (room3 == 2)
+            ThirdfloorN.displayN();
+        else
+            System.out.println();
+        exit++;
     }
+    }
+
+    private static void While(boolean b) {
+    }
+
     public static void chosebat(int bat){
     int count = 0;
     while(count <= 3) {
