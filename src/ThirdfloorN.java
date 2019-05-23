@@ -40,6 +40,7 @@ public class ThirdfloorN {
         } else if (chosie == 2) {
             System.out.println(" ");
             ThirdfloorN.displayS();
+
         }
     }
 }
