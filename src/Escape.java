@@ -54,7 +54,14 @@ public class Escape {
             else if(a2 == 2){
                 int a3;
                 System.out.println("You are behind the bathroom door. You see the guy go to the room.");
-                System.out.println("1) Go for the Stairs. 2) Stay.");
+                System.out.println("       1) Go for the Stairs.   2) Stay.");
+                System.out.println("               ______                                             ");
+                System.out.println("               |     |                                        ");
+                System.out.println("         ______|     |                                              ");
+                System.out.println("        |            |                                        ");
+                System.out.println("  ______|            |                                              ");
+                System.out.println("  |                  |                                        ");
+                System.out.println("  |__________________|                                                          ");
                 a3=k.nextInt();
 //                while(Count)
                 if (a3 == 1){
