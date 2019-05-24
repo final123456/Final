@@ -75,12 +75,12 @@ public class Escape {
         System.out.println("You Escaped");}
         else{
         System.out.println("          ____                   ");
-        System.out.println("         |- - |     __           ");
-        System.out.println("         |____|    / /           ");
+        System.out.println("         |- - |              ");
+        System.out.println("         |____|              ");
         System.out.println("      ___/    |___/ /            ");
-        System.out.println("     / ___      ____/            ");
+        System.out.println("     / ___      ___/            ");
         System.out.println("    / /  |     |                 ");
-        System.out.println("   /_/   |_____|                 ");
+        System.out.println("         |_____|                 ");
         System.out.println("        / /  / /                 ");
         System.out.println("       /_/  /_/                  ");
 
@@ -98,8 +98,8 @@ public class Escape {
         }
         else if (a1 == 2) {
         int getfirst;
-        System.out.println("You Chose to Look around. It's safe to walk around. There is a bat.");
-        System.out.println("1) Try to get bat. 2) Go Dawn a flor.");
+        System.out.println("You Chose to Look around. It's safe to walk around. There is a knife.");
+        System.out.println("1) Try to get knife. 2) Go Dawn a flor.");
         getfirst=k.nextInt();
         if( getfirst == 1) {
             chosebat(bat);
@@ -126,28 +126,69 @@ public class Escape {
             System.out.println();
     }
     }
-
     private static void While(boolean b) {
     }
-
     public static void chosebat(int bat){
-    int count = 0;
+    int count = 1;
     while(count <= 3) {
         int random = (int) (Math.random()) * 30 + 27;
         int userguess;
         Scanner k = new Scanner(System.in);
+        System.out.println("  ");
+        System.out.println("  ");
+        System.out.println("                  /)                                           ");
+        System.out.println("                 | |                                           ");
+        System.out.println("                 | |                                           ");
+        System.out.println("                 |_/                                           ");
+        System.out.println("                 | |                                           ");
+        System.out.println("                 |_|                                           ");
 
-        System.out.println("chose the right number from 1-30 get bat. "+count+"/3 ");
+
+        System.out.println("chose the right number from 1-30 get knife. "+count+"/4 ");
         userguess = k.nextInt();
         if (userguess == random){
-            System.out.println("new Item obtain, Bat. ");
+            System.out.println("      new Item obtain, knife. ");
+            System.out.println("                  /)                                           ");
+            System.out.println("                 | |                                           ");
+            System.out.println("                 | |                                           ");
+            System.out.println("                 |_/                                           ");
+            System.out.println("                 | |                                           ");
+            System.out.println("                 |_|                                           ");
             bat++;
             count=count+4;
         }
         else {
-            System.out.println("Try again");
-        count++;}
+            int again;
+            System.out.println("     __     ___  ____   ______   ____");
+            System.out.println("  |  /|  / |  / /    )  /     / /____/                                         ");
+            System.out.println("  | / | /  |_/ (     /  |     |      |                             ");
+            System.out.println("  |/  |/   | |  (___/   |     |  ____|                                         ");
+            System.out.println("                                                                 ");
+            System.out.println(" Tyr again 1) yes 2) no");
+            again = k.nextInt();
+            if (again == 1)
+                count++;
+            else if (again == 2) {
+                System.out.println("Too bad");
+                count++;
+            }
+        }
     }
+    }
+    public static void displaydeath(){
+        {
+            System.out.println("          ____               ");
+            System.out.println("         |- - |              ");
+            System.out.println("         |____|              ");
+            System.out.println("      ___/    |___/ /        ");
+            System.out.println("     / ___      ___/         ");
+            System.out.println("    / /  |     |             ");
+            System.out.println("         |_____|             ");
+            System.out.println("        / /  / /             ");
+            System.out.println("       /_/  /_/              ");
+
+            System.out.println("You died, try again");}
+
     }
     }
     
