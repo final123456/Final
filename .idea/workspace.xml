@@ -16,10 +16,13 @@
         <entry file="file://$PROJECT_DIR$/src/Escape.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="63" column="69" lean-forward="true" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
+              <caret line="103" column="71" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
               <folding>
-                <element signature="method#stay#0;class#Escape#0" />
+                <element signature="method#displayEscape#0;class#Escape#0" />
+                <element signature="method#Jump#0;class#Escape#0" />
                 <element signature="method#DawnAFloor#0;class#Escape#0" />
+                <element signature="method#chosebat#0;class#Escape#0" />
+                <element signature="method#displaydeath#0;class#Escape#0" />
               </folding>
             </state>
           </provider>
@@ -37,10 +40,13 @@
       <file leaf-file-name="ThirdfloorM.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ThirdfloorM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            <state relative-caret-position="462">
+              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
-                <element signature="method#displayM#0;class#ThirdfloorM#0" />
+                <element signature="method#displaychoise2#0;class#ThirdfloorM#0" />
+                <element signature="method#choise3#0;class#ThirdfloorM#0" />
+                <element signature="method#backtoroom#0;class#ThirdfloorM#0" />
+                <element signature="method#shoot#0;class#ThirdfloorM#0" />
               </folding>
             </state>
           </provider>
@@ -51,6 +57,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>backtoroom</find>
+      <find>int A1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -60,8 +67,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/ThirdfloorM.java" />
         <option value="$PROJECT_DIR$/src/Escape.java" />
+        <option value="$PROJECT_DIR$/src/ThirdfloorM.java" />
       </list>
     </option>
   </component>
@@ -92,9 +99,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RecentsManager">
@@ -193,7 +200,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298292" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298292" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -217,17 +224,54 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Escape.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="63" column="69" lean-forward="true" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
+          <folding>
+            <element signature="method#displayEscape#0;class#Escape#0" />
+            <element signature="method#Jump#0;class#Escape#0" />
+            <element signature="method#DawnAFloor#0;class#Escape#0" />
+            <element signature="method#chosebat#0;class#Escape#0" />
+            <element signature="method#displaydeath#0;class#Escape#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ThirdfloorM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+          <folding>
+            <element signature="method#displaychoise2#0;class#ThirdfloorM#0" />
+            <element signature="method#choise3#0;class#ThirdfloorM#0" />
+            <element signature="method#backtoroom#0;class#ThirdfloorM#0" />
+            <element signature="method#shoot#0;class#ThirdfloorM#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Escape.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1764">
           <caret line="84" column="64" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="64" />
           <folding>
-            <element signature="method#stay#0;class#Escape#0" />
+            <element signature="method#displayEscape#0;class#Escape#0" />
+            <element signature="method#Jump#0;class#Escape#0" />
             <element signature="method#DawnAFloor#0;class#Escape#0" />
+            <element signature="method#chosebat#0;class#Escape#0" />
+            <element signature="method#displaydeath#0;class#Escape#0" />
           </folding>
         </state>
       </provider>
@@ -244,7 +288,10 @@
         <state relative-caret-position="714">
           <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
           <folding>
-            <element signature="method#displayM#0;class#ThirdfloorM#0" />
+            <element signature="method#displaychoise2#0;class#ThirdfloorM#0" />
+            <element signature="method#choise3#0;class#ThirdfloorM#0" />
+            <element signature="method#backtoroom#0;class#ThirdfloorM#0" />
+            <element signature="method#shoot#0;class#ThirdfloorM#0" />
           </folding>
         </state>
       </provider>
@@ -263,23 +310,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ThirdfloorM.java">
+    <entry file="file://$PROJECT_DIR$/src/Escape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        <state relative-caret-position="336">
+          <caret line="103" column="71" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
           <folding>
-            <element signature="method#displayM#0;class#ThirdfloorM#0" />
+            <element signature="method#displayEscape#0;class#Escape#0" />
+            <element signature="method#Jump#0;class#Escape#0" />
+            <element signature="method#DawnAFloor#0;class#Escape#0" />
+            <element signature="method#chosebat#0;class#Escape#0" />
+            <element signature="method#displaydeath#0;class#Escape#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Escape.java">
+    <entry file="file://$PROJECT_DIR$/src/ThirdfloorM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="63" column="69" lean-forward="true" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
+        <state relative-caret-position="462">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
-            <element signature="method#stay#0;class#Escape#0" />
-            <element signature="method#DawnAFloor#0;class#Escape#0" />
+            <element signature="method#displaychoise2#0;class#ThirdfloorM#0" />
+            <element signature="method#choise3#0;class#ThirdfloorM#0" />
+            <element signature="method#backtoroom#0;class#ThirdfloorM#0" />
+            <element signature="method#shoot#0;class#ThirdfloorM#0" />
           </folding>
         </state>
       </provider>
