@@ -78,17 +78,25 @@ public class Escape {
     public static void Jump(int A1) {
     int random = (int) (Math.random() * 100);
     int userguess;
+    int guess=0;
     Scanner k = new Scanner(System.in);
-    System.out.println("Chose a number from 1 to 100. If you guess it you escape");
-    userguess = k.nextInt();
-    if (userguess == random) {
-        System.out.println("You Escaped");
-        System.out.println("           =)                    ");
+    while (guess!=3) {
+        System.out.println("Chose a number from 1 to 100. If you guess it you escape");
+        userguess = k.nextInt();
+        if (userguess == random) {
+            System.out.println("You Escaped");
+            System.out.println("           =)                    ");
+            guess = guess + 3;
+        } else if (userguess > random) {
+            System.out.println(userguess + " is high ");
+            ++guess;
+        } else if (userguess < random) {
+            System.out.println(userguess + " is low ");
+            ++guess;
+        }
     }
-        else{
-        displaydeath();
-        System.out.println("You died, try again");}
     }
+
     public static void stay(int a3, int bat, int exit){
     int a1;
     Scanner k = new Scanner(System.in);
