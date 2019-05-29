@@ -194,7 +194,7 @@ public class Escape {
     public static void displaydeath(){
         {
             System.out.println("          ____               ");
-            System.out.println("         |- - |              ");
+            System.out.println("         |* * |              ");
             System.out.println("         |____|              ");
             System.out.println("      ___/    |___/ /        ");
             System.out.println("     / ___      ___/         ");
