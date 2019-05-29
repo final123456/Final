@@ -3,23 +3,34 @@ import java.util.Scanner;
 public class ThirdfloorM {
     public static void displayM(){
         Scanner k=new Scanner(System.in);
-        String Choise;
+        String Choice;
         int coise;
         System.out.println("there are 3 rooms, A, B, C. choose one");
-        Choise=k.next();
-        if (Choise.equalsIgnoreCase("A")){
+        Choice=k.next();
+        if (Choice.equalsIgnoreCase("A")){
             System.out.println("IT A TRAP!!! you can't escape.");
+            Start.displayStart();
+
         }
-        else if (Choise.equalsIgnoreCase("B")){
+        else if (Choice.equalsIgnoreCase("B")){
             System.out.println("There is a dall. it would seem that you\n" +
                     "are not his first victim. ");
             System.out.println("there is a picture book. it full with pictures of oys and girl all about the age of 6-10.\n" +
                     "All the kids were in rooms that looked similar but they aren't exact. there is your picture is in there");
             System.out.println("\n" +
-                    "THOSE AREN'T MEANT FOR YOU KID. He is in the room with you.Try again");
+                    "THOSE AREN'T MEANT FOR YOU KID. He is in the room with you. Try again.");
+            Start.displayStart();
         }
-        else if (Choise.equalsIgnoreCase("C")){
-            System.out.println("This room is empty.It must be a trap.  1)go for the window.  2) to living room ");
+        else if (Choice.equalsIgnoreCase("C")){
+            System.out.println("This room is empty.It must be a trap.\n" +
+                    "           1)go for the window.   2) to living room ");
+            System.out.println("  ____________                _______      ");
+            System.out.println("  |    |     |               (       )     ");
+            System.out.println("  |____|_____|              (         )    ");
+            System.out.println("  |    |     |              |         |    ");
+            System.out.println("  |____|_____|              |     []  |    ");
+            System.out.println("                            |         |    ");
+            System.out.println("                            |_________|    ");
             coise=k.nextInt();
             displaychoise2(coise);
 
@@ -70,6 +81,7 @@ public class ThirdfloorM {
 
                     System.out.println("You died, try again");
                 System.out.print("try again");
+                Start.displayStart();
 
             }
             else

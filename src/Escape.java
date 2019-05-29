@@ -8,7 +8,7 @@ public class Escape {
     int exit = 0;
     int bat=0;//    boolean Count = true;
     Scanner k= new Scanner(System.in);
-        System.out.println("You are kidnapped. you are looked in a room that is 4 tories high. The Guy that kidnapped you is in the house.");
+        System.out.println("You have been kidnapped. you are looked in a room that is 4 stories high. The Guy that kidnapped you is in the house.");
         System.out.println("  ____________                _______      ");
         System.out.println("  |    |     |               (       )     ");
         System.out.println("  |____|_____|              (         )    ");
@@ -46,6 +46,7 @@ public class Escape {
                 System.out.println("              |   * (__)*      |                             ");
                 System.out.println("              |      : :       |                             ");
                 System.out.println("              |________________|                             ");
+                Start.displayStart();
 
 
             }
@@ -69,6 +70,7 @@ public class Escape {
                     System.out.println("     |  **   |                   ");
                     System.out.println("     |__----_|                         ");
                     System.out.println("                              ");
+                    Start.displayStart();
                 }
                     if (a3 == 2)
                         stay(a3,bat,exit);
@@ -76,33 +78,35 @@ public class Escape {
     }
 }
     public static void Jump(int A1) {
-    int random = (int) (Math.random() * 100);
-    int userguess;
-    int guess=0;
-    Scanner k = new Scanner(System.in);
-    while (guess!=3) {
-        System.out.println("Chose a number from 1 to 100. If you guess it you escape");
-        userguess = k.nextInt();
-        if (userguess == random) {
-            System.out.println("You Escaped");
-            System.out.println("           =)                    ");
-            guess = guess + 3;
-        } else if (userguess > random) {
-            System.out.println(userguess + " is high ");
-            ++guess;
-        } else if (userguess < random) {
-            System.out.println(userguess + " is low ");
-            ++guess;
-        }
-    }
-    }
+        int random = (int) (Math.random() * 100);
+        int userguess;
+        int guess = 0;
+        Scanner k = new Scanner(System.in);
+        while (guess != 3) {
+            System.out.println("Chose a number from 1 to 100. If you guess it you escape. "+ guess+" /3");
+            userguess = k.nextInt();
+            if (userguess == random) {
+                System.out.println("You Escaped");
+                System.out.println("           =)                    ");
+                System.exit(0);
 
+            } else if (userguess > random) {
+                System.out.println(userguess + " is high ");
+                ++guess;
+            } else if (userguess < random) {
+                System.out.println(userguess + " is low ");
+                ++guess;
+            }
+        }
+        System.out.println(random + " was the right number ");
+        displaydeath();
+    }
     public static void stay(int a3, int bat, int exit){
     int a1;
     Scanner k = new Scanner(System.in);
     System.out.println("You Chose to stay. The Kidnapper notice you left. \n" +
             " He is MAD. He gets out the room and goes down stairs");
-    System.out.println(                "1) Go DAWN a flor. 2) Look around ");
+    System.out.println(                "1) Go down a floor. 2) Look around ");
         System.out.println("               ______                   ___                          ");
         System.out.println("               |     |                 |0 0|                    ");
         System.out.println("         ______|     |                 (___)                         ");
@@ -142,30 +146,32 @@ public class Escape {
             System.out.println("    _________        _______________                      ");
             System.out.println("   (         )      |       |      |  ");
             System.out.println("  (           )     |       |      |    ");
-            System.out.println("  |            |    |       |      |       ");
+            System.out.println("  |            |    |       |      |      ");
             System.out.println("  |         [] |    |    [] | []   |    ");
             System.out.println("  |            |    |       |      |    ");
             System.out.println("  |            |    |       |      |     ");
             System.out.println("  |____________|    |_______|______|    ");
-        System.out.println(       "1) go to a room. 2) go to a closet. ");
-        room3 = k.nextInt();
-        if (room3 == 1)
-            ThirdfloorM.displayM();
+            System.out.println("1) go to a room. 2) go to a closet. ");
+            room3 = k.nextInt();
+            if (room3 == 1)
+                ThirdfloorM.displayM();
 
-        else if (room3 == 2)
-            ThirdfloorN.displayN();
-        else
-            System.out.println();
-    }
+            else if (room3 == 2)
+                ThirdfloorN.displayN();
+            else
+                System.out.println("not an option");
+        }
+
     }
     private static void While(boolean b) {
     }
     public static void chosebat(int bat) {
         int count = 1;
-        while (count <= 3) {
-            int random = (int) (Math.random()) * 30 + 27;
+        int random = (int) (Math.random()) * 30;
+        Scanner k = new Scanner(System.in);
+        while (count <= 3)
+        {
             int userguess;
-            Scanner k = new Scanner(System.in);
             System.out.println("                  /)                                           ");
             System.out.println("                 | |                                           ");
             System.out.println("                 | |                                           ");
@@ -174,7 +180,7 @@ public class Escape {
             System.out.println("                 |_|                                           ");
 
 
-            System.out.println("chose the right number from 1-30 get knife. " + count + "/4 ");
+            System.out.println("chose the right number from 1-30 get knife. " + count + "/3 ");
             userguess = k.nextInt();
             if (userguess == random) {
                 System.out.println("      new Item obtain, knife. ");
@@ -187,8 +193,31 @@ public class Escape {
                 bat++;
                 count = count + 4;
             } else {
-                System.out.println("Try again");
+                if (userguess >random){
+                    System.out.println(userguess+" is to high");
+                count++;
+                }
+                else if(userguess<random) {
+                    System.out.println(userguess + " is to low ");
+                    count++;
+                }
+
             }
+
+        }
+        System.out.println(random+" Was the right number" +
+                "");
+        int input;
+
+        System.out.println(" go to third floor 1)yes  2)no");
+        input=k.nextInt();
+        if (input == 1){
+            DawnAFloor();
+
+        }
+        else if ( input == 2){
+            System.out.println(" TOO BAD");
+            DawnAFloor();
         }
     }
     public static void displaydeath(){
@@ -203,8 +232,12 @@ public class Escape {
             System.out.println("        / /  / /             ");
             System.out.println("       /_/  /_/              ");
 
-            System.out.println("You died, try again");}
+            System.out.println("You died, try again");
+            Start.displayStart();
+        }
 
     }
+
+
     }
     
