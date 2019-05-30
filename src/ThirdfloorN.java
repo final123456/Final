@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class ThirdfloorN {
     public static void displayN(){
         Scanner k=new Scanner(System.in);
@@ -23,13 +22,12 @@ public class ThirdfloorN {
         System.out.println("Chose a number from 1 to 10. If you guess it you escape");
         userguess = k.nextInt();
         if (userguess == random) {
-            System.out.println("You Escaped");}
-        else if(userguess != random)
+            System.out.println("You Escaped");
+        Escape.displayStart();}
+        else if(userguess != random){
             System.out.println("You died, try again");
+        Escape.displayStart();}
     }
-
-
-
     public static void propelN() {
         Scanner k = new Scanner(System.in);
         int chosie;
@@ -38,13 +36,12 @@ public class ThirdfloorN {
         chosie = k.nextInt();
         if (chosie == 1) {
             System.out.println(" you go to the second to play it safe but then he traps you  ");
+            Escape.displayStart();
         } else if (chosie == 2) {
             System.out.println(" you go there first and you find his key you get in the car and drive off");
             ThirdfloorN.displayS();
-
-            System.out.println("You Escaped");}
-
-
+            System.out.println("You Escaped");
+            Escape.displayStart();}
         else {
             System.out.println("                _____                  ");
             System.out.println("               | x x |                 ");
@@ -56,13 +53,8 @@ public class ThirdfloorN {
             System.out.println("                  |                   ");
             System.out.println("                  |                     ");
             System.out.println("You died, try again");
+            Escape.displayStart();
         }
         //String[] guyDie = {"-", "X", "|", "*", "\u00A0"};
-
-
-
     }
-
-
-
 }
