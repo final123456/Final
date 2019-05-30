@@ -32,12 +32,7 @@ public class ThirdfloorM {
             System.out.println("                            |         |    ");
             System.out.println("                            |_________|    ");
             coise=k.nextInt();
-            displaychoise2(coise);
-
-
-        }
-
-    }
+            displaychoise2(coise);    }
     public static void displaychoise2(int coise){
         Scanner k = new Scanner(System.in);
         int choise3;
