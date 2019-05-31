@@ -56,14 +56,14 @@ public class Escape {
                 int a3;
                 System.out.println("You are behind the bathroom door. You see the kidnapper entering the room you were just on.");
                 System.out.println("       1) Go for the Stairs.   2) Stay.");
+                System.out.println("               ______                 ___                          ");
+                System.out.println("               |     |               |   |                    ");
+                System.out.println("         ______|     |               (___)                         ");
+                System.out.println("        |            |               __|__                    ");
+                System.out.println("  ______|            |                 |                           ");
+                System.out.println("  |                  |                _|_                     ");
+                System.out.println("  |__________________|               |   |                     ");
                 a3=k.nextInt();
-                System.out.println("               ______                   ___                          ");
-                System.out.println("               |     |                 |   |                    ");
-                System.out.println("         ______|     |                 (___)                         ");
-                System.out.println("        |            |                 __|__                    ");
-                System.out.println("  ______|            |                   |                           ");
-                System.out.println("  |                  |                  _|_                     ");
-                System.out.println("  |__________________|                 |   |                     ");
 
                 if (a3 == 1){
                     System.out.println("The kidnapper sees you getting out the bathroom.");
@@ -81,7 +81,7 @@ public class Escape {
     }
 }
     public static void Jump(int A1) {
-        int random = (int) (Math.random() * 100);
+        int random = (int) (Math.random() * 100 + 1);
         int userguess;
         int guess = 0;
         Scanner k = new Scanner(System.in);
@@ -119,7 +119,7 @@ public class Escape {
         System.out.println("  |__________________|                 |   |                     ");
         a1=k.nextInt();
     if (a1 == 1) {
-       DawnAFloor();
+       displaymath();
         }
         else if (a1 == 2) {
         int getfirst;
@@ -135,20 +135,16 @@ public class Escape {
         getfirst=k.nextInt();
         if( getfirst == 1) {
             chosebat(bat);
-            DawnAFloor();
+            displaymath();
         }
         else
-            DawnAFloor();
+            displaymath();
     }
     }
     public static void DawnAFloor() {
         {
             Scanner k = new Scanner(System.in);
-            int lock;
-            System.out.println("There is a lock in the door. Solve the equation to unlock it. ");
-            System.out.println(" x+3(3)=10");
-            lock= k.nextInt();
-            if (lock==1) {
+
                 System.out.println("You are now in floor 3. You see the kidnapper go into a room \n" +
                         " at the end of the hall. The stair are next to him.");
                 int room3;
@@ -168,18 +164,15 @@ public class Escape {
                 else if (room3 == 2)
                     ThirdfloorN.displayN();
                 else
-                    System.out.println("not an option");
-            }
-            else{
-                System.out.println("Try again");
-                DawnAFloor();
+                    System.out.println("not an option");{
+                        DawnAFloor();
             }
         }
 
     }
     public static void chosebat(int bat) {
         int count = 1;
-        int random = (int) (Math.random()) * 30;
+        int random = (int) (Math.random()) * 30 + 1;
         Scanner k = new Scanner(System.in);
         while (count <= 3)
         {
@@ -224,12 +217,12 @@ public class Escape {
         System.out.println(" go to third floor 1)yes  2)no");
         input=k.nextInt();
         if (input == 1){
-            DawnAFloor();
+           displaymath();
 
         }
         else if ( input == 2){
             System.out.println(" TOO BAD");
-            DawnAFloor();
+            displaymath();
         }
     }
     public static void displaydeath(  ){
@@ -271,6 +264,7 @@ public class Escape {
         System.out.println("You escaped "+ escape);
         System.out.println("You played "+playtimes+" Games");
         System.out.println("you won "+math+"% of your games");
+        Start.displayStart();
     }
     public static void shoot () {
         System.out.println("            ___                   ");
@@ -295,14 +289,16 @@ public class Escape {
         Scanner k = new Scanner(System.in);
         while (error != 100) {
             System.out.println("do you want to restart");
-            System.out.println("1 Yes 2)No ");
+            System.out.println("1 Yes 2)No 3)Main menu");
             error++;
             option = k.nextInt();
             if (option == 1)
                 DawnAFloor();
-            else if (option == 2)
-                System.exit(0);
-
+            else if (option == 2){
+                System.exit(0);}
+            else if (option==3){
+                Start.displayStart();
+            }
         }
     }
     public static void displaydeath2(){
@@ -318,5 +314,20 @@ public class Escape {
         System.out.println("You died, try again");
         kill++;
         displayStart2();
+    }
+    public static void displaymath(){
+        Scanner k = new Scanner(System.in);
+        int lock;
+        System.out.println("There is a lock in the door. Solve the equation to unlock it. ");
+        System.out.println(" x+3(3)=10");
+        lock= k.nextInt();
+        if (lock==1) {
+            DawnAFloor();
+        }
+        else {
+            System.out.println("Try again");
+            displaymath();
+        }
+
     }
     }
