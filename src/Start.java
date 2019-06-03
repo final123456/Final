@@ -16,7 +16,7 @@ public class Start {
         System.out.println("                           |      Will you survive or die.    |");
         System.out.println("                           |                                  |");
         System.out.println("                           |      1)Start                     |");
-        System.out.println("                           |      2)Show your run             |");
+        System.out.println("                           |      2)Stats                     |");
         System.out.println("                           |      3)Quit                      |");
         System.out.println("                           |__________________________________|");
         while (start) {
