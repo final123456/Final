@@ -183,8 +183,6 @@ public class Escape {
             System.out.println("                 |_/                                           ");
             System.out.println("                 | |                                           ");
             System.out.println("                 |_|                                           ");
-
-
             System.out.println("chose the right number from 1-30 get knife. " + count + "/3 ");
             userguess = k.nextInt();
             if (userguess == random) {
@@ -206,19 +204,15 @@ public class Escape {
                     System.out.println(userguess + " is to low ");
                     count++;
                 }
-
             }
-
         }
         System.out.println(random+" Was the right number" +
                 "");
         int input;
-
         System.out.println(" go to third floor 1)yes  2)no");
         input=k.nextInt();
         if (input == 1){
            displaymath();
-
         }
         else if ( input == 2){
             System.out.println(" TOO BAD");
@@ -328,6 +322,5 @@ public class Escape {
             System.out.println("Try again");
             displaymath();
         }
-
     }
     }
