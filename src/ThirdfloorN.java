@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class ThirdfloorN {
     public static void displayN(){
+        //3nd floor story
         Scanner k=new Scanner(System.in);
         int chosie;
         System.out.println("you here him go past you you don't know what what to do.  1) go to the next room and hide under the bed.\n" +
@@ -16,6 +17,7 @@ public class ThirdfloorN {
         }
     }
     public static void displayS(){
+        //random number generator guess the number and you escape
         int random = (int) (Math.random()) * 10 + 4;
         int userguess;
         Scanner k = new Scanner(System.in);
@@ -29,13 +31,14 @@ public class ThirdfloorN {
         Escape.displayStart();}
     }
     public static void propelN() {
+        //story to escape
         Scanner k = new Scanner(System.in);
         int chosie;
-        System.out.println("you have the the chosie to skip the second floor and go to the 1st will you go but yo also don't know where he is at" +
+        System.out.println("you have the the choice to skip the second floor and go to the 1st will you go but yo also don't know where he is at" +
                 "  1) go to second floor 2) go to the 1st and find away to escape ");
         chosie = k.nextInt();
         if (chosie == 1) {
-            System.out.println(" you go to the second to play it safe but then he traps you  ");
+            System.out.println(" you go to the second floor to play it safe but he was there");
             Escape.displayStart();
         } else if (chosie == 2) {
             System.out.println(" you go there first and you find his key you get in the car and drive off");
@@ -46,7 +49,7 @@ public class ThirdfloorN {
             System.out.println("                _____                  ");
             System.out.println("               | x x |                 ");
             System.out.println("               |  *  |                 ");
-            System.out.println("               |_____|               | ");
+            System.out.println("               |_____|                ");
             System.out.println("                  |                   ");
             System.out.println("                  |                ");
             System.out.println("            ------|------                 ");

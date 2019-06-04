@@ -6,10 +6,11 @@ public class Escape {
     private static int escape = 0;
     private static int playtimes = 0;
     public static void displayEscape(){
-    int A1;
-    int bat=0;//    boolean Count = true;
-    Scanner k= new Scanner(System.in);
-    playtimes++;
+        // This is the begging of the code.
+        int A1;
+        int bat=0;//    boolean Count = true;
+        Scanner k= new Scanner(System.in);
+        playtimes++;
         System.out.println("You have been kidnapped in a 4 story house. The person that kidnapped you is in the house.");
         System.out.println("  ____________                _______      ");
         System.out.println("  |    |     |               (       )     ");
@@ -19,14 +20,14 @@ public class Escape {
         System.out.println("                            |         |    ");
         System.out.println("                            |_________|    ");
         System.out.println(" 1) jump of the window. 2) go out the door");
-    A1=k.nextInt();
-    if (A1 == 1)
-        Jump(A1);
-    else if(A1 == 2){
-        int a2;
-        System.out.println("You hear the kidnapper getting closer. \n" +
-                "1) go back to the room. 2) Go to the Bathroom.");
-        a2=k.nextInt();
+        A1=k.nextInt();
+        if (A1 == 1)
+            Jump(A1);
+        else if(A1 == 2){
+            int a2;
+            System.out.println("You hear the kidnapper getting closer. \n" +
+                    "1) go back to the room. 2) Go to the Bathroom.");
+            a2=k.nextInt();
             if(a2 == 1) {
                 int chose;
                 System.out.println("                               2) closet              ");
@@ -54,7 +55,7 @@ public class Escape {
             }
             else if(a2 == 2){
                 int a3;
-                System.out.println("You are behind the bathroom door. You see the kidnapper entering the room you were just on.");
+                System.out.println("You are behind the bathroom door. You see the kidnapper entering the room you were just in.");
                 System.out.println("       1) Go for the Stairs.   2) Stay.");
                 System.out.println("               ______                 ___                          ");
                 System.out.println("               |     |               |   |                    ");
@@ -66,7 +67,7 @@ public class Escape {
                 a3=k.nextInt();
 
                 if (a3 == 1){
-                    System.out.println("The kidnapper sees you getting out the bathroom.");
+                    System.out.println("The kidnapper watches you leave the bathroom.");
                     System.out.println("     __________                         ");
                     System.out.println("     |[*] [*]|                   ");
                     System.out.println("     |  **   |                   ");
@@ -75,24 +76,26 @@ public class Escape {
                     kill++;
                     displayStart();
                 }
-                    if (a3 == 2)
-                        stay(a3,bat);
+                if (a3 == 2)
+                    stay(a3,bat);
             }
+        }
     }
-}
     public static void Jump(int A1) {
+        //If You chose to jump it will take you to this code. guess the correct number and you will escape, get it wrong
+        //and try again.
         int random = (int) (Math.random() * 100 + 1);
         int userguess;
         int guess = 0;
         Scanner k = new Scanner(System.in);
         while (guess != 3) {
-            System.out.println("Chose a number from 1 to 100. If you guess it you escape. "+ guess+" /3");
+            System.out.println("Pick a number from 1 to 100. If your  right you will escape. "+ guess+" /3");
             userguess = k.nextInt();
             if (userguess == random) {
                 System.out.println("You Escaped");
                 System.out.println("           =)                    ");
-            escape++;
-            displayStart();
+                escape++;
+                displayStart();
             } else if (userguess > random) {
                 System.out.println(userguess + " is too high ");
                 ++guess;
@@ -105,11 +108,12 @@ public class Escape {
         displaydeath();
     }
     public static void stay(int a3, int bat){
-    int a1;
-    Scanner k = new Scanner(System.in);
-    System.out.println("You Chose to stay. The Kidnapper notice you left. \n" +
-            " and gets mad. He gets out the room and goes down stairs");
-    System.out.println(                "1) Go down a floor. 2) Look around ");
+        //you chose to stay at the bathroom.
+        int a1;
+        Scanner k = new Scanner(System.in);
+        System.out.println("You Chose to stay. The Kidnapper notices you left. \n" +
+                " and gets mad. He gets out the room and goes down stairs");
+        System.out.println(                "1) Go down a floor. 2) Look around ");
         System.out.println("               ______                   ___                          ");
         System.out.println("               |     |                 |0 0|                    ");
         System.out.println("         ______|     |                 (___)                         ");
@@ -118,59 +122,60 @@ public class Escape {
         System.out.println("  |                  |                  _|_                     ");
         System.out.println("  |__________________|                 |   |                     ");
         a1=k.nextInt();
-    if (a1 == 1) {
-       displaymath();
+        if (a1 == 1) {
+            displaymath();
         }
         else if (a1 == 2) {
-        int getfirst;
-        System.out.println("You Chose to Look around. There is a knife.");
-        System.out.println("1) Try to get knife.      2) Go Dawn a flor.");
-        System.out.println("                                       _______ ");
-        System.out.println("         /)                           |      |          ");
-        System.out.println("        | |                    _______|      |                 ");
-        System.out.println("        | |                    |             |         ");
-        System.out.println("        |_/             _______|             |              ");
-        System.out.println("        | |             |                    |          ");
-        System.out.println("        |_|             |____________________|                    ");
-        getfirst=k.nextInt();
-        if( getfirst == 1) {
-            chosebat(bat);
-            displaymath();
+            int getfirst;
+            System.out.println("You Chose to Look around. There is a knife.");
+            System.out.println("1) Try to get knife.      2) Go Dawn a floor.");
+            System.out.println("                                       _______ ");
+            System.out.println("         /)                           |      |          ");
+            System.out.println("        | |                    _______|      |                 ");
+            System.out.println("        | |                    |             |         ");
+            System.out.println("        |_/             _______|             |              ");
+            System.out.println("        | |             |                    |          ");
+            System.out.println("        |_|             |____________________|                    ");
+            getfirst=k.nextInt();
+            if( getfirst == 1) {
+                chosebat(bat);
+                displaymath();
+            }
+            else
+                displaymath();
         }
-        else
-            displaymath();
-    }
     }
     public static void DawnAFloor() {
         {
+            // Manuel worked on the Room. Noah worked on closet.
             Scanner k = new Scanner(System.in);
+            System.out.println("You are now in floor 3. You see the kidnapper go into a room \n" +
+                    " at the end of the hall. The stair are next to him.");
+            int room3;
+            System.out.println("    _________        _______________                      ");
+            System.out.println("   (         )      |       |      |  ");
+            System.out.println("  (           )     |       |      |    ");
+            System.out.println("  |            |    |       |      |      ");
+            System.out.println("  |         [] |    |    [] | []   |    ");
+            System.out.println("  |            |    |       |      |    ");
+            System.out.println("  |            |    |       |      |     ");
+            System.out.println("  |____________|    |_______|______|    ");
+            System.out.println("1) go to a room. 2) go to a closet. ");
+            room3 = k.nextInt();
+            if (room3 == 1)
+                ThirdfloorM.displayM();
 
-                System.out.println("You are now in floor 3. You see the kidnapper go into a room \n" +
-                        " at the end of the hall. The stair are next to him.");
-                int room3;
-                System.out.println("    _________        _______________                      ");
-                System.out.println("   (         )      |       |      |  ");
-                System.out.println("  (           )     |       |      |    ");
-                System.out.println("  |            |    |       |      |      ");
-                System.out.println("  |         [] |    |    [] | []   |    ");
-                System.out.println("  |            |    |       |      |    ");
-                System.out.println("  |            |    |       |      |     ");
-                System.out.println("  |____________|    |_______|______|    ");
-                System.out.println("1) go to a room. 2) go to a closet. ");
-                room3 = k.nextInt();
-                if (room3 == 1)
-                    ThirdfloorM.displayM();
-
-                else if (room3 == 2)
-                    ThirdfloorN.displayN();
-                else
-                    System.out.println("not an option");{
-                        DawnAFloor();
-            }
+            else if (room3 == 2)
+                ThirdfloorN.displayN();
+            else
+                System.out.println("not an option");{
+            DawnAFloor();
+        }
         }
 
     }
     public static void chosebat(int bat) {
+        // You can try to get the knife by guessing the right number but the knife is not necessary for survivable.
         int count = 1;
         int random = (int) (Math.random()) * 30 + 1;
         Scanner k = new Scanner(System.in);
@@ -183,7 +188,7 @@ public class Escape {
             System.out.println("                 |_/                                           ");
             System.out.println("                 | |                                           ");
             System.out.println("                 |_|                                           ");
-            System.out.println("chose the right number from 1-30 get knife. " + count + "/3 ");
+            System.out.println("choice the right number from 1-30 get knife. " + count + "/3 ");
             userguess = k.nextInt();
             if (userguess == random) {
                 System.out.println("      new Item obtain, knife. ");
@@ -198,7 +203,7 @@ public class Escape {
             } else {
                 if (userguess >random){
                     System.out.println(userguess+" is to high");
-                count++;
+                    count++;
                 }
                 else if(userguess<random) {
                     System.out.println(userguess + " is to low ");
@@ -212,7 +217,7 @@ public class Escape {
         System.out.println(" go to third floor 1)yes  2)no");
         input=k.nextInt();
         if (input == 1){
-           displaymath();
+            displaymath();
         }
         else if ( input == 2){
             System.out.println(" TOO BAD");
@@ -220,40 +225,44 @@ public class Escape {
         }
     }
     public static void displaydeath(  ){
-            System.out.println("          ____               ");
-            System.out.println("         |* * |              ");
-            System.out.println("         |____|              ");
-            System.out.println("      ___/    |___/ /        ");
-            System.out.println("     / ___      ___/         ");
-            System.out.println("    / /  |     |             ");
-            System.out.println("         |_____|             ");
-            System.out.println("        / /  / /             ");
-            System.out.println("       /_/  /_/              ");
-            System.out.println("You died, try again");
-            kill++;
-            displayStart();
-        }
+        //displayes when you die in the first part of the game
+        System.out.println("          ____               ");
+        System.out.println("         |* * |              ");
+        System.out.println("         |____|              ");
+        System.out.println("      ___/    |___/ /        ");
+        System.out.println("     / ___      ___/         ");
+        System.out.println("    / /  |     |             ");
+        System.out.println("         |_____|             ");
+        System.out.println("        / /  / /             ");
+        System.out.println("       /_/  /_/              ");
+        System.out.println("You died, try again");
+        kill++;
+        displayStart();
+    }
     public static void displayStart() {
+        //displays when you win
         for(int i = 0; i<10; i++){
             System.out.println(
             );}
-            int option;
-            int error=0;
-                Scanner k = new Scanner(System.in);
-                while (error != 100) {
-                    System.out.println("do you want to restart");
-                    System.out.println("1 Yes 2)No ");
-                    error++;
-                    option = k.nextInt();
-                    if (option == 1)
-                        Start.displayStart();
-                    else if (option == 2)
-                        System.exit(0);
-                }
-            }
+        int option;
+        int error=0;
+        Scanner k = new Scanner(System.in);
+        escape++;
+        while (error != 100) {
+            System.out.println("do you want to restart");
+            System.out.println("1 Yes 2)No ");
+            error++;
+            option = k.nextInt();
+            if (option == 1)
+                Start.displayStart();
+            else if (option == 2)
+                System.exit(0);
+        }
+    }
     public static void displayScore(){
+        //The math behind The score
         int math;
-        math=escape/playtimes;
+        math=escape/playtimes*100;
         System.out.println("You died "+ kill);
         System.out.println("You escaped "+ escape);
         System.out.println("You played "+playtimes+" Games");
@@ -261,6 +270,7 @@ public class Escape {
         Start.displayStart();
     }
     public static void shoot () {
+        //Displays when you get shoot
         System.out.println("            ___                   ");
         System.out.println("         __|- |              ");
         System.out.println("         |____|              ");
@@ -274,6 +284,7 @@ public class Escape {
         Escape.displayStart2();
     }
     public static void displayStart2() {
+        //Displays after death image for 3rd floor
         for (int i = 0; i < 10; i++) {
             System.out.println(
             );
@@ -296,6 +307,7 @@ public class Escape {
         }
     }
     public static void displaydeath2(){
+        //Displays when you die on floor 3
         System.out.println("          ____               ");
         System.out.println("         |* * |              ");
         System.out.println("         |____|              ");
@@ -310,6 +322,7 @@ public class Escape {
         displayStart2();
     }
     public static void displaymath(){
+        //equation to get in 3rd floor
         Scanner k = new Scanner(System.in);
         int lock;
         System.out.println("There is a lock in the door. Solve the equation to unlock it. ");
@@ -323,4 +336,4 @@ public class Escape {
             displaymath();
         }
     }
-    }
+}
