@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Start {
+    //main menu of the game.
 
 
     public static void displayStart() {

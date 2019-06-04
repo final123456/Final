@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class ThirdfloorM {
     public static void displayM() {
+        //chose a room
         Scanner k = new Scanner(System.in);
         String Choice;
         int coise;
@@ -34,6 +35,7 @@ public class ThirdfloorM {
         }
     }
         public static void displaychoise2(int coise){
+        //More story
             Scanner k = new Scanner(System.in);
             int choise3;
             if (coise == 1) {
@@ -55,6 +57,7 @@ public class ThirdfloorM {
             }
         }
         public static void choise3 (int choise3){
+        //more story
             if (choise3 == 1) {
                 System.out.println("Did you really that would work.  ");
                 Escape.displaydeath2();
@@ -64,6 +67,7 @@ public class ThirdfloorM {
             }
         }
         public static void backtoroom() {
+        //You don't win at all
             Scanner k = new Scanner(System.in);
             int s;
             System.out.println("1) Run for the stairs. 2) Stay ");
